@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/_JAMES/LVLS/Start Menu.unity
+    guid: fabb737784b22fa478ce79d95d3c3c1e
+  - enabled: 1
+    path: Assets/_JAMES/LVLS/World_1.unity
+    guid: cfe314eeb0f0b4b44aa21c6e0f8dd2d0
+  - enabled: 1
+    path: Assets/_JAMES/LVLS/World_2.unity
+    guid: 61b7f9833bdf4d14d94aad0234dcde9e
+  - enabled: 1
+    path: Assets/_JAMES/LVLS/WIn Screen.unity
+    guid: d95143391321e0d46bde4e12206f88fa
+  m_configObjects: {}
