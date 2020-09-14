@@ -74,6 +74,11 @@ public class GameManager : MonoBehaviour
         {
             GamePaused = !GamePaused; // toggle the gamepause boolean
 
+            // CLEAR CURRENT SELECTED GAME OBJECT IN THE EVENT SYSTEM
+            EventSystem.current.SetSelectedGameObject(null);
+            // SET A NEW SELECTED GAME OBJECT
+            EventSystem.current.SetSelectedGameObject(firstButton);
+
         }
 
     }
@@ -102,11 +107,6 @@ public class GameManager : MonoBehaviour
 
         // DISABLE AUDIO
         AudioListener.pause = true;
-
-        // CLEAR CURRENT SELECTED GAME OBJECT IN THE EVENT SYSTEM
-        EventSystem.current.SetSelectedGameObject(null);
-        // SET A NEW SELECTED GAME OBJECT
-        EventSystem.current.SetSelectedGameObject(firstButton);
         
     }
 
