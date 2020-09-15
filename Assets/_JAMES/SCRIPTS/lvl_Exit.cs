@@ -11,8 +11,9 @@ public class lvl_Exit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        StartCoroutine(LoadNextLevel());
+        // StartCoroutine(LoadNextLevel());
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     IEnumerator LoadNextLevel()

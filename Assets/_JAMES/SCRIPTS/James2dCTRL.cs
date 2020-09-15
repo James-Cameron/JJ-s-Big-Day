@@ -27,6 +27,9 @@ public class James2dCTRL : MonoBehaviour
     [SerializeField, Tooltip("Acceleration while in the air.")]
     float airAcceleration = 30f;
 
+    [SerializeField, Tooltip("Deceleration while in the air.")]
+    float airDeceleration = 20f;
+
     [SerializeField, Tooltip("Deceleration applied when character is Grounded and not attempting to move.")]
     float groundDeceleration = 70f;
 
@@ -107,6 +110,10 @@ public class James2dCTRL : MonoBehaviour
     [HideInInspector]
     public Vector2 velocity;
 
+    private float acceleration;
+
+    private float deceleration;
+
     public LayerMask groundLayer;
 
     private GameManager gm;
@@ -165,12 +172,12 @@ public class James2dCTRL : MonoBehaviour
         // WHEN WE HAVE AN INPUT VALUE, APPROACH MAX SPEED WITH A RATE OF CHANGE OF WALK ACCELERATION
         if (moveInput != 0)
         {
-            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, walkAcceleration * Time.deltaTime);
+            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
         }
         // WHEN WE DONT HAVE AN INPUT VALUE, APPROACH 0 SPEED WITH A RATE OF CHANGE OF GROUNDDECELREATION
         else
         {
-            velocity.x = Mathf.MoveTowards(velocity.x, 0, groundDeceleration * Time.deltaTime);
+            velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
         }
 
         transform.Translate(velocity * Time.deltaTime);
@@ -256,8 +263,8 @@ public class James2dCTRL : MonoBehaviour
     void Drift()
     {
         // DEFINITELY WANT TO TOY WITH AIR ACCEL AND DECCEL
-        float acceleration = isGrounded ? walkAcceleration : airAcceleration;
-        float deceleration = isGrounded ? groundDeceleration : 0;
+        acceleration = isGrounded ? walkAcceleration : airAcceleration;
+        deceleration = isGrounded ? groundDeceleration : airDeceleration;
 
     }
 
