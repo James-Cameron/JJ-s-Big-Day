@@ -155,21 +155,22 @@ MonoBehaviour:
   climbSpeed: 5
   walkAcceleration: 75
   airAcceleration: 30
+  airDeceleration: 20
   groundDeceleration: 70
   jumpHeight: 4
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   maxCoyoteTime: 0.04
   jumpPressRememberTime: 0.1
+  deathDelay: 0.5
   wallJumpTime: 0.2
   wallSlideSpeed: 0.3
   wallDistance: 0.55
   isWallSliding: 0
+  isWallGrabbing: 0
   mPlatDistance: 1
-  mPlatLayer:
-    serializedVersion: 2
-    m_Bits: 0
   isGrounded: 0
+  velocity: {x: 0, y: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -4349,21 +4350,22 @@ MonoBehaviour:
   climbSpeed: 5
   walkAcceleration: 75
   airAcceleration: 30
+  airDeceleration: 20
   groundDeceleration: 70
   jumpHeight: 4
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   maxCoyoteTime: 0.04
   jumpPressRememberTime: 0.1
+  deathDelay: 0.5
   wallJumpTime: 0.2
   wallSlideSpeed: 0.3
   wallDistance: 0.55
   isWallSliding: 0
+  isWallGrabbing: 0
   mPlatDistance: 1
-  mPlatLayer:
-    serializedVersion: 2
-    m_Bits: 0
   isGrounded: 0
+  velocity: {x: 0, y: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024

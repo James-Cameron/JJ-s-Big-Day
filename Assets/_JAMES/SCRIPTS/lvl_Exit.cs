@@ -5,29 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class lvl_Exit : MonoBehaviour
 {
-    [SerializeField] float LevelLoadDelay = 2f;
-    [SerializeField] float slomoFactor = .2f;
 
+    private GameManager gm;
+
+    public Vector3 startPos;
+
+    public GameObject player;
+
+
+
+    private void Start()
+    {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // StartCoroutine(LoadNextLevel());
+        if (other.gameObject.tag == "Player")
+        {
+            player.transform.position = startPos;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
     }
 
-    IEnumerator LoadNextLevel()
-    {
-        Time.timeScale = slomoFactor;
-
-        yield return new WaitForSecondsRealtime(LevelLoadDelay);
-
-        Time.timeScale = 1f;
-
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
 
 
 
