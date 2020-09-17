@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
 
     public bool GamePaused = false;
     public GameObject ExitMenu;
-    public GameObject firstButton; 
+    public GameObject firstButton;
 
-
+    public bool mainScene = false; // TELLS THE GM IF WE ARE IN THE MAIN SCENE.  IF IT IS FALSE THEN WE WON'T BE ABLE TO ACCES THE PAUSE MENU
 
     public AudioMixer audioMixer;
 
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseToggle()
     {
-        if (Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Submit") && mainScene == true)
         {
             GamePaused = !GamePaused; // toggle the gamepause boolean
 
@@ -133,6 +133,14 @@ public class GameManager : MonoBehaviour
         ExitMenu.SetActive(false); // DEACTIVATE THE EXITMENU GAMEOBJECT IN THE SCENE
 
         GamePaused = !GamePaused;
+
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        mainScene = true; // TELL THE GAME MANAGER THAT WE ARE IN THE MAIN SCENE NOW
 
     }
 
