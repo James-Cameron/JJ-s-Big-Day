@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class GemPickup : MonoBehaviour
 {
-    [SerializeField] AudioClip gemPickupSFX;
 
-    [SerializeField] int gemPoints = 1;
+    private AudioManager am;
+
+    void Start()
+    {
+        am = FindObjectOfType<AudioManager>();
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // FindObjectOfType<GameManager>().AddToScore(coinPoints);
-        AudioSource.PlayClipAtPoint(gemPickupSFX, Camera.main.transform.position);
+        am.PlaySound("Gem");
 
         Destroy(gameObject);
 
