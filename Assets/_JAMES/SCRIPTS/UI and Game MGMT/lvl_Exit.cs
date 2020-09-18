@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class lvl_Exit : MonoBehaviour
 {
@@ -10,19 +9,31 @@ public class lvl_Exit : MonoBehaviour
 
     public GameObject player;
 
+    public float spawnDelay = .5f;
+    public float slomoFactor = .2f;
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            player.transform.position = startPos;
+            StartCoroutine(LoadNextWorld());
 
         }
 
     }
 
+    IEnumerator LoadNextWorld()
+    {
+        Time.timeScale = slomoFactor;
 
+        yield return new WaitForSecondsRealtime(spawnDelay);
+
+        player.transform.position = startPos;
+
+        Time.timeScale = 1f;
+
+    }
 
 
 
