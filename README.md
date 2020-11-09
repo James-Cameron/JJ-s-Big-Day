@@ -1,4 +1,4 @@
-https://drive.google.com/file/d/1LkkVgcUPUKs_gCJNyD7CDsaA983aGwGA/view?usp=sharing
+
 https://i.imgur.com/bL8lPoO.png
  
 All the design work, code, and art in this game is my own.  I wanted to keep "JJ's" simple, so the player's move-set is just run, jump, and climb.  Celeste has been my design inspiration for this game.  I love how much they explore their game's mechanics, and I tried to imitate their philosophy of designing levels as if they were rock climbing problems.  Usually my levels are bite sized challenges that take a few moves to solve.
