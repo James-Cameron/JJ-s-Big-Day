@@ -7,6 +7,6 @@ All the design work, code, and art in this game is my own.  I wanted to keep "JJ
 
 A major point of focus in this game has been scripting a snappy and responsive character controller.  This is a movement heavy game, so getting the controller right was very important.  I implemented design features such as coyote time and jump buffering to give the game a better feel.  After I had scripted my character controller I got to work designing levels and implementing my own pixel art.  I like to build levels with multiple paths.  In this level the player can take the route shown in the gif or they can climb around the outside edges of the stationary blocks rather than dodging the spikes.
 
-https://drive.google.com/file/d/1ZCMvYEVXDeNFYEE-AIvh4hQBwu4tkFMC/view?usp=sharing
+![](https://i.imgur.com/rrD06tO.gif)
 
 I have worked hard to add my own art to this game.  It just wouldn't have felt like it was my game if I had continued to use someone else's art in it.  I had never made pixel art before so I had to teach myself how.  I am pretty happy with how my sprites turned out considering this is my first attempt!  My main character (pictured above)  is based off of Jotaro Kujo, one of my favorite anime characters.
