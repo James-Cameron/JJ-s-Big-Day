@@ -3,7 +3,7 @@
  
 All the design work, code, and art in this game is my own.  I wanted to keep "JJ's" simple, so the player's move-set is just run, jump, and climb.  Celeste has been my design inspiration for this game.  I love how much they explore their game's mechanics, and I tried to imitate their philosophy of designing levels as if they were rock climbing problems.  Usually my levels are bite sized challenges that take a few moves to solve.
 
-![pee](https://i.imgur.com/xl1EKtg.mp4)
+![pee](https://i.imgur.com/xl1EKtg.png)
 
 A major point of focus in this game has been scripting a snappy and responsive character controller.  This is a movement heavy game, so getting the controller right was very important.  I implemented design features such as coyote time and jump buffering to give the game a better feel.  After I had scripted my character controller I got to work designing levels and implementing my own pixel art.  I like to build levels with multiple paths.  In this level the player can take the route shown in the gif or they can climb around the outside edges of the stationary blocks rather than dodging the spikes.
 
